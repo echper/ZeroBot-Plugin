@@ -58,9 +58,9 @@ import (
 
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ahsai"         // ahsai tts
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ai_false"      // 服务器监控
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/aipaint"       // ai绘图
+	//_ "github.com/FloatTech/ZeroBot-Plugin/plugin/aipaint"       // ai绘图
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/aiwife"        // 随机老婆
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/alipayvoice"   // 支付宝到账语音
+	//_ "github.com/FloatTech/ZeroBot-Plugin/plugin/alipayvoice"   // 支付宝到账语音
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/autowithdraw"  // 触发者撤回时也自动撤回
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/b14"           // base16384加解密
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/baidu"         // 百度一下
@@ -68,7 +68,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/base64gua"     // base64卦加解密
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/baseamasiro"   // base天城文加解密
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/bilibili"      // b站相关
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/book_review"   // 哀伤雪刃吧推书记录
+	//_ "github.com/FloatTech/ZeroBot-Plugin/plugin/book_review"   // 哀伤雪刃吧推书记录
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/cangtoushi"    // 藏头诗
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/choose"        // 选择困难症帮手
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/chouxianghua"  // 说抽象话
@@ -130,14 +130,14 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/translation"   // 翻译
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/vitsnyaru"     // vits猫雷
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/vtb_quotation" // vtb语录
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/wallet"        // 钱包
+	//_ "github.com/FloatTech/ZeroBot-Plugin/plugin/wallet"        // 钱包
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/wangyiyun"     // 网易云音乐热评
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/warframeapi"   // warframeAPI插件
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/wenben"        // 文本指令大全
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/wenxinAI"      // 百度文心AI画图
+	//_ "github.com/FloatTech/ZeroBot-Plugin/plugin/wenxinAI"      // 百度文心AI画图
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/word_count"    // 聊天热词
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/wordle"        // 猜单词
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ygo"           // 游戏王相关插件
+	//_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ygo"           // 游戏王相关插件
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ymgal"         // 月幕galgame
 
 	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/thesaurus"     // 词典匹配回复
@@ -206,7 +206,7 @@ func init() {
 	// 直接写死 URL 时，请更改下面第二个参数
 	url := flag.String("u", "ws://127.0.0.1:6700", "Set Url of WSClient.")
 	// 默认昵称
-	adana := flag.String("n", "椛椛", "Set default nickname.")
+	adana := flag.String("n", "Taritsu", "Set default nickname.")
 	prefix := flag.String("p", "/", "Set command prefix.")
 	runcfg := flag.String("c", "", "Run from config file.")
 	save := flag.String("s", "", "Save default config to file and exit.")
@@ -238,7 +238,7 @@ func init() {
 	}
 
 	// 通过代码写死的方式添加主人账号
-	// sus = append(sus, 12345678)
+	 sus = append(sus, 2039175585)
 	// sus = append(sus, 87654321)
 
 	if *runcfg != "" {
@@ -264,7 +264,7 @@ func init() {
 	}
 	config.W = []*driver.WSClient{driver.NewWebSocketClient(*url, *token)}
 	config.Z = zero.Config{
-		NickName:       append([]string{*adana}, "ATRI", "atri", "亚托莉", "アトリ"),
+		NickName:       append([]string{*adana}, "对立","616","lowiro" ),
 		CommandPrefix:  *prefix,
 		SuperUsers:     sus,
 		RingLen:        *rsz,
